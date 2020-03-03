@@ -5,7 +5,7 @@ function Card() {
     const [data, setData] = useState({})
     useEffect(() => {
         axios
-        .get('https://api.nasa.gov/planetary/apod?api_key=miI40eqMuxQHfzdZnREccFeTZflbRiOwARDCDhwI&date=2012-03-14')
+        .get('https://api.nasa.gov/planetary/apod?api_key=miI40eqMuxQHfzdZnREccFeTZflbRiOwARDCDhwI&date=2012-03-25')
         .then(response => setData(response.data))
     }, [])
 
