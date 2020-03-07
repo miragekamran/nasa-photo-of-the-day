@@ -1,34 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import styled from 'styled-components';
+
 import { Button, Badge, Fade, Toast, ToastBody, ToastHeader } from 'reactstrap';
 import Image from 'react-bootstrap/Image'
 
-const dateButton = styled.h2`
-    background-color: red;
-    border-radius: 3px;
-    border: 2px solid palevioletred;
-    
-`;
 
-const SubHeadline = styled.h1`
-  color: black;
-  border: 1px solid black;
-  background-color: green;
 
-  &:hover {
-    background-color: red;
-  }
-
-  @media (max-width: 600px) {
-    background-color: purple;
-  }
-  `;
-
-  const centeralText = styled.p`
-  align-items: center;
-  justify-content: center;
-  `;
 
 
 
@@ -59,7 +36,7 @@ function Card() {
                 
             </div>
             <div>
-                <Fade in={fadeIn} tag='h5' className='mt-3'><Image src='holder.js/100px250' fluid thumbnail src = {data.url}/></Fade>
+                <Fade in={fadeIn} tag='h5' className='mt-3'><Image fluid thumbnail src = {data.url}/></Fade>
             </div>
             <h3>{data.copyright}</h3>
             <div>
