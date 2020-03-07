@@ -13,7 +13,7 @@ function Card() {
     const [data, setData] = useState({});
     useEffect(() => {
         axios
-        .get('https://api.nasa.gov/planetary/apod?api_key=miI40eqMuxQHfzdZnREccFeTZflbRiOwARDCDhwI&date=20-02-10')
+        .get('https://api.nasa.gov/planetary/apod?api_key=miI40eqMuxQHfzdZnREccFeTZflbRiOwARDCDhwI&date=2020-02-10')
         .then(response => setData(response.data))
     }, [])
 
@@ -29,7 +29,7 @@ function Card() {
         const toggle2 = () => setShow(!show);
     
     return (
-        <div className = 'wrapper' style={{ background: 'black' }}>
+        <div className = 'wrapper' style={{ background: 'orange' }}>
             <h1><Badge color="secondary" size='lg'>{data.title}</Badge></h1>
             <div>
                 <Button color = 'primary' outline onClick={toggle}>{data.date}</Button>
